@@ -1,7 +1,7 @@
 package news
 
 import (
-	"../util"
+	"github.com/l1z2g9/go-quote2/util"
 	"bytes"
 	_ "crypto/sha1"
 	"encoding/json"

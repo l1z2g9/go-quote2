@@ -1,11 +1,11 @@
 package web
 
 import (
-	"../news"
-	"../rthk"
-	"../securities"
-	"../soundcloud"
-	"../util"
+	"github.com/l1z2g9/go-quote2/news"
+	"github.com/l1z2g9/go-quote2/rthk"
+	"github.com/l1z2g9/go-quote2/securities"
+	"github.com/l1z2g9/go-quote2/soundcloud"
+	"github.com/l1z2g9/go-quote2/util"
 	_ "archive/zip"
 	_ "bytes"
 	"encoding/base64"

@@ -1,7 +1,7 @@
 package securities
 
 import (
-	"../util"
+	"github.com/l1z2g9/go-quote2/util"
 	"database/sql"
 	"encoding/json"
 	"fmt"

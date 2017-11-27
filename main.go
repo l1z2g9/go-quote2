@@ -1,11 +1,11 @@
 package main
 
 import (
-	"./news"
-	"./util"
-	"./web"
 	"fmt"
 	"github.com/gorilla/mux"
+	"github.com/l1z2g9/go-quote2/news"
+	"github.com/l1z2g9/go-quote2/util"
+	"github.com/l1z2g9/go-quote2/web"
 	"github.com/robfig/cron"
 	"log"
 	"net/http"
