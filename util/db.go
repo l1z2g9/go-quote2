@@ -2,7 +2,8 @@ package util
 
 import (
 	"database/sql"
-	_ "github.com/mattn/go-sqlite3"
+	// _ "github.com/mattn/go-sqlite3"
+    _ "github.com/lib/pq"
 	"log"
 	"os"
 	"path/filepath"
