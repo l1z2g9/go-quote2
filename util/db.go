@@ -54,5 +54,6 @@ func GetDB() *sql.DB {
 		Error.Fatal(err, "Fail to connect DB")
 	}
 
+Info.Println("Get connection")
 	return db
 }
