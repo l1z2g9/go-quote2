@@ -21,48 +21,6 @@
 			"revisionTime": "2017-11-09T03:54:02Z"
 		},
 		{
-			"checksumSHA1": "4oUVFYcNs0Bdch+iARCMTrn+IQ4=",
-			"path": "github.com/l1z2g9/go-quote2",
-			"revision": "34cafb2a578c025435e6c0822b64f065f42891dd",
-			"revisionTime": "2017-12-15T07:33:26Z"
-		},
-		{
-			"checksumSHA1": "ursKBPP3y1oIcc76jBYrksJ6opM=",
-			"path": "github.com/l1z2g9/go-quote2/news",
-			"revision": "34cafb2a578c025435e6c0822b64f065f42891dd",
-			"revisionTime": "2017-12-15T07:33:26Z"
-		},
-		{
-			"checksumSHA1": "6g0o+1W5U2kC3c5VnoOwmCff5/c=",
-			"path": "github.com/l1z2g9/go-quote2/rthk",
-			"revision": "34cafb2a578c025435e6c0822b64f065f42891dd",
-			"revisionTime": "2017-12-15T07:33:26Z"
-		},
-		{
-			"checksumSHA1": "QsIO6P9uH7/JvSxhkF9lSYLeLzI=",
-			"path": "github.com/l1z2g9/go-quote2/securities",
-			"revision": "34cafb2a578c025435e6c0822b64f065f42891dd",
-			"revisionTime": "2017-12-15T07:33:26Z"
-		},
-		{
-			"checksumSHA1": "dUWMA/nPaoXXZChpvrsbJXYhm+M=",
-			"path": "github.com/l1z2g9/go-quote2/soundcloud",
-			"revision": "34cafb2a578c025435e6c0822b64f065f42891dd",
-			"revisionTime": "2017-12-15T07:33:26Z"
-		},
-		{
-			"checksumSHA1": "8S/YzqpnC+Xsetz4lZBk41bfhKY=",
-			"path": "github.com/l1z2g9/go-quote2/util",
-			"revision": "34cafb2a578c025435e6c0822b64f065f42891dd",
-			"revisionTime": "2017-12-15T07:33:26Z"
-		},
-		{
-			"checksumSHA1": "E11nn9s0Jxi9+HI/UWmBFe+5hLU=",
-			"path": "github.com/l1z2g9/go-quote2/web",
-			"revision": "34cafb2a578c025435e6c0822b64f065f42891dd",
-			"revisionTime": "2017-12-15T07:33:26Z"
-		},
-		{
 			"checksumSHA1": "ALdCwbzBmgi66VcOnK0x+F5Q0B4=",
 			"path": "github.com/lib/pq",
 			"revision": "83612a56d3dd153a94a629cd64925371c9adad78",
