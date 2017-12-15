@@ -33,7 +33,7 @@ func SetDB_old(path ...string) {
 func GetDB_old() *sql.DB {
 	// log.Println("DB_PATH ", dbPath)
 	if len(dbPath) == 0 {
-		SetDB()
+		SetDB_old()
 	}
 
 	var db *sql.DB
