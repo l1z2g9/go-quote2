@@ -1,7 +1,7 @@
 package util
 
 import (
-	"io/ioutil"
+	_ "io/ioutil"
 	"log"
 	"os"
 )
