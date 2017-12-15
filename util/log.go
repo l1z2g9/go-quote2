@@ -12,11 +12,12 @@ var (
 )
 
 func init() {
-	Info = log.New(ioutil.Discard,
+    // change ioutil.Discard => os.Stdout
+	Info = log.New(os.Stdout,
 		"INFO: ",
 		log.Ldate|log.Ltime|log.Lshortfile)
 
-	Error = log.New(ioutil.Discard,
+	Error = log.New(os.Stdout,
 		"ERROR: ",
 		log.Ldate|log.Ltime|log.Lshortfile)
 }

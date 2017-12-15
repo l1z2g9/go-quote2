@@ -140,7 +140,6 @@ func getRawQuote(category string) DataList {
 }
 
 func getFavorCodes(category string) (string, string, map[string]float64) {
-fmt.Println("Test " + category)
 	util.Info.Println("category", category)
 	var codes []string
 	var holds []string
