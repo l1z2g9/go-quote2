@@ -13,7 +13,7 @@ import (
 )
 
 func init() {
-	util.ShowLog()
+	// util.ShowLog()
 }
 
 func maino() {
