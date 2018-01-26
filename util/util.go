@@ -1,7 +1,9 @@
 package util
 
 import (
+	"bytes"
 	"compress/gzip"
+	"encoding/base64"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -38,10 +40,29 @@ func AuthenticateRequest(req *http.Request) bool {
 		return true
 	}
 
-	for _, c := range req.Cookies() { // Simple authentication, should use OAuth 2.0
+	/*for _, c := range req.Cookies() { // Simple authentication, should use OAuth 2.0
 		if c.Name == "JSESSIONID" {
 			pass = true
 			break
+		}
+	}*/
+
+	basicAuthPrefix := "Basic "
+	user := []byte("foo")
+	passwd := []byte("bar")
+
+	auth := req.Header.Get("Authorization")
+	if strings.HasPrefix(auth, basicAuthPrefix) {
+		payload, err := base64.StdEncoding.DecodeString(
+			auth[len(basicAuthPrefix):],
+		)
+		if err == nil {
+			pair := bytes.SplitN(payload, []byte(":"), 2)
+			if len(pair) == 2 && bytes.Equal(pair[0], user) &&
+				bytes.Equal(pair[1], passwd) {
+
+				return true
+			}
 		}
 	}
 	return pass

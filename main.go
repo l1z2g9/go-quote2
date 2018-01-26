@@ -40,7 +40,7 @@ func main() {
 		}
 	}
 
-    r.PathPrefix("/public/").Handler(http.StripPrefix("/public/", http.FileServer(http.Dir("public/"))))
+	r.PathPrefix("/public/").Handler(http.StripPrefix("/public/", http.FileServer(http.Dir("public/"))))
 
 	bind := fmt.Sprintf("%s:%s", os.Getenv("HOST"), os.Getenv("PORT"))
 	util.Info.Printf("listening on %s...\n", bind)
@@ -67,8 +67,11 @@ func (h authHandler) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	pass := util.AuthenticateRequest(req)
 
 	if !pass {
-		w.WriteHeader(http.StatusForbidden)
-		fmt.Fprint(w, "Access to myapp is Forbidden !!")
+		//w.WriteHeader(http.StatusForbidden)
+		//fmt.Fprint(w, "Access to myapp is Forbidden !!")
+
+		w.Header().Set("WWW-Authenticate", `Basic realm="Restricted"`)
+		w.WriteHeader(http.StatusUnauthorized)
 		return
 	}
 
