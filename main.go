@@ -40,6 +40,8 @@ func main() {
 		}
 	}
 
+    r.PathPrefix("/public/").Handler(http.StripPrefix("/public/", http.FileServer(http.Dir("public/"))))
+
 	bind := fmt.Sprintf("%s:%s", os.Getenv("HOST"), os.Getenv("PORT"))
 	util.Info.Printf("listening on %s...\n", bind)
 	err := http.ListenAndServe(bind, AuthHandler()(r))

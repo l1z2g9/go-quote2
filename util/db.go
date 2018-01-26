@@ -53,6 +53,6 @@ func GetDB() *sql.DB {
 		fmt.Println(err, "Fail to connect DB")
 	}
 
-	fmt.Println("Successfully connected!")
+	Info.Println("Successfully connected!")
 	return db
 }
