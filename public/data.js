@@ -189,3 +189,10 @@ const zhouYongJieList = [['0B1tCMe1zn1gHcmZlSkl0YjZLb2s','City_Snapshot-20150408
 ['0B1tCMe1zn1gHUWh4U01HeGxJTVk','City_Snapshot-20170201-在紐西蘭的養雞趣事'],
 ['0B1tCMe1zn1gHTHdydTlUQjQ2b2s','City_Snapshot-20170208-紐西蘭獲選全球最佳國家'],
 ['0B1tCMe1zn1gHVlFLSmVtOFU3OVU','City_Snapshot-20170215-紐西蘭羊數量逐年下降']];
+
+
+const rthkList = [['http://stm.rthk.hk/radio1', 'RTHK 1'],
+['http://stm.rthk.hk/radio2', 'RTHK 2'],
+['http://stm.rthk.hk/radio3', 'RTHK 3'],
+['http://stm.rthk.hk/radio4', 'RTHK 4'],
+['http://stm.rthk.hk/radio5', 'RTHK 5']];

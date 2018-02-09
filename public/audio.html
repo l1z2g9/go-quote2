@@ -21,7 +21,7 @@
     </style>
     <script src="./data.js?s=2"></script>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <script type="text/jsx" src="audioTrack.jsx"></script>
+    <script type="text/jsx" src="audioTrack.jsx?d=x"></script>
     <script type="text/babel">
         class Menu extends React.Component {
           constructor(props) {
@@ -29,12 +29,12 @@
             this.state = {cat: '粵講越有趣', subCat: '唐詩七絕選賞 - 陳耀南教授主講', list : ycanList};
             this.handleChange = this.handleChange.bind(this);
 
-            this.audioList = {'唐詩七絕選賞 - 陳耀南教授主講':ycanList, '葉培':yePeiList, '潘昭強':panChaoQiangList, '周永傑':zhouYongJieList};
+            this.audioList = {'唐詩七絕選賞 - 陳耀南教授主講':ycanList, '葉培':yePeiList, '潘昭強':panChaoQiangList, '周永傑':zhouYongJieList, 'RTHK': rthkList};
             // this.audioList = {'1':ycanList, '2': yePeiList, '3': panChaoQiangList, '4': zhouYongJieList, '5', zhaobinghengList, '6': liangjieeList, '7': tanhuiqingList, '8': zhongfeiList, '9': yanjianrongList};
           }
 
           handleChange(e) {
-            e.preventDefault();
+            //e.preventDefault();
             this.cat = e.target.dataset.cat;
             this.subCat = e.target.dataset.subcat;
             this.list = this.audioList[this.subCat];
@@ -61,7 +61,7 @@
                               <li className="pure-menu-item"><a href="#" onClick={this.handleChange} data-cat="大城小事" data-subcat="嚴劍蓉" className="pure-menu-link">嚴劍蓉</a></li>
                           </ul>
                         </li>
-                        <li className="pure-menu-item"><a href="#" onClick={this.handleChange} className="pure-menu-link">Sports</a></li>
+                        <li className="pure-menu-item"><a href="#" onClick={this.handleChange} data-cat="LiveRadio" data-subcat="RTHK" className="pure-menu-link">RTHK Live Radio</a></li>
                         <li className="pure-menu-item"><a href="#" onClick={this.handleChange} className="pure-menu-link">Finance</a></li>
                     </ul>
                 </div>

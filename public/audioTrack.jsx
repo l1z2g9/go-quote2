@@ -7,7 +7,12 @@ class AudioTrack extends React.Component {
    }
 
   handleChange(e) {
-    this.url = "https://drive.google.com/uc?id=" + e.target.value + "&authuser=0&export=download";
+    if (e.target.value.startsWith('http')) {
+      this.url = e.target.value;
+    }else{
+      this.url = "https://drive.google.com/uc?id=" + e.target.value + "&authuser=0&export=download";
+    }
+
     this.title = e.target.dataset.title;
 
     this.setState({url: this.url, title: this.title});
