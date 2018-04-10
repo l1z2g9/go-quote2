@@ -9,6 +9,12 @@
 			"revisionTime": "2016-03-05T22:51:43Z"
 		},
 		{
+			"checksumSHA1": "pyAmUZhWjrvM/ObD31Qb7Pt6okg=",
+			"path": "github.com/eduncan911/podcast",
+			"revision": "10213c61cee52248f7651b28827b83133aa447be",
+			"revisionTime": "2017-12-10T16:21:10Z"
+		},
+		{
 			"checksumSHA1": "IkPM2QLv9urri7S49wzroQx9oXA=",
 			"path": "github.com/gorilla/context",
 			"revision": "08b5f424b9271eedf6f9f0ce86cb9396ed337a42",
@@ -43,6 +49,13 @@
 			"path": "github.com/mattn/go-sqlite3",
 			"revision": "d5ffb5c0cca8778699a929b236766f4a7af674e8",
 			"revisionTime": "2017-11-22T00:24:37Z"
+		},
+		{
+			"checksumSHA1": "iwLqOY6Nr1BitBUex4K0Wep3JL8=",
+			"origin": "github.com/eduncan911/podcast/vendor/github.com/pkg/errors",
+			"path": "github.com/pkg/errors",
+			"revision": "10213c61cee52248f7651b28827b83133aa447be",
+			"revisionTime": "2017-12-10T16:21:10Z"
 		},
 		{
 			"checksumSHA1": "84Paw7jhJNd9NwCvWASQ4Y9+ZaA=",
