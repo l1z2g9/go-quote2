@@ -608,7 +608,7 @@ func init() {
 	Handlers = append(Handlers, &Handler{Path: "/feedly/getFeedList", Fn: GetFeedList})
 	Handlers = append(Handlers, &Handler{Path: "/feedly/getEntryContent", Fn: GetEntryContent})
 
-	Handlers = append(Handlers, &Handler{Path: "/feed/exportFeedForCitySnapShot", Fn: ExportFeedForCitySnapShot})
+	Handlers = append(Handlers, &Handler{Path: "/feed/exportFeedForCitySnapShot.xml", Fn: ExportFeedForCitySnapShot})
 
 	Handlers = append(Handlers, &Handler{Path: "/", Fn: Home})
 }
