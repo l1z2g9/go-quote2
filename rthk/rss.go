@@ -12,7 +12,7 @@ import (
 	_ "github.com/gorilla/feeds"
 )
 
-func ExportFeedForCitySnap() []byte {
+func ExportFeedForCitySnapShot() []byte {
 	now := time.Now()
 	/*feed := &feeds.Feed{
 		Title:       "RTHK City Snapshot",
