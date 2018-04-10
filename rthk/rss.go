@@ -57,7 +57,7 @@ func ExportFeedForCitySnap() string {
 
 	feed.Items = items
 
-	atom, err := feed.ToAtom()
+	atom, err := feed.ToRss()
 	if err != nil {
 		log.Fatal(err)
 	}
