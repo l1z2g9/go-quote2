@@ -195,4 +195,8 @@ const rthkList = [['http://stm.rthk.hk/radio1', 'RTHK 1'],
 ['http://stm.rthk.hk/radio2', 'RTHK 2'],
 ['http://stm.rthk.hk/radio3', 'RTHK 3'],
 ['http://stm.rthk.hk/radio4', 'RTHK 4'],
-['http://stm.rthk.hk/radio5', 'RTHK 5']];
+['http://stm.rthk.hk/radio5', 'RTHK 5'],
+['http://stm.rthk.hk/radiopth', 'RTHK PuTongHua'],
+['http://stm.rthk.hk/radio31', 'RTHK 31'],
+['http://stm.rthk.hk/radio33', 'RTHK 33'],
+['http://stm.rthk.hk/radio35', 'RTHK 35']];

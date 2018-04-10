@@ -1,16 +1,10 @@
 package web
 
 import (
-	"github.com/l1z2g9/go-quote2/news"
-	"github.com/l1z2g9/go-quote2/rthk"
-	"github.com/l1z2g9/go-quote2/securities"
-	"github.com/l1z2g9/go-quote2/soundcloud"
-	"github.com/l1z2g9/go-quote2/util"
 	_ "archive/zip"
 	_ "bytes"
 	"encoding/base64"
 	"fmt"
-	"github.com/gorilla/mux"
 	"io"
 	"io/ioutil"
 	"net"
@@ -19,6 +13,13 @@ import (
 	"net/url"
 	"regexp"
 	"strings"
+
+	"github.com/gorilla/mux"
+	"github.com/l1z2g9/go-quote2/news"
+	"github.com/l1z2g9/go-quote2/rthk"
+	"github.com/l1z2g9/go-quote2/securities"
+	"github.com/l1z2g9/go-quote2/soundcloud"
+	"github.com/l1z2g9/go-quote2/util"
 )
 
 func wrapHTML(content string) string {
@@ -135,7 +136,6 @@ func GetBookDetail(res http.ResponseWriter, req *http.Request) {
 	util.CompressData(res, util.GetBookDetail(vars["chamoId"]))
 	//fmt.Fprint(res, util.GetBookDetail(vars["chamoId"]))
 }
-
 
 // NewsList ...
 func NewsList(res http.ResponseWriter, req *http.Request) {
@@ -507,6 +507,13 @@ func GetEntryContent(res http.ResponseWriter, req *http.Request) {
 	util.CompressData(res, f.GetEntryContent(id, alternateHref))
 }
 
+func ExportFeedForCitySnap(res http.ResponseWriter, req *http.Request) {
+	saveAccessInfo(res, req, "exportFeedForCitySnap")
+	res.Header().Set("Content-Type", "application/rss+xml; charset=utf-8")
+
+	util.CompressData(res, []byte(rthk.ExportFeedForCitySnap()))
+}
+
 func saveAccessInfo(res http.ResponseWriter, req *http.Request, funcName string) {
 	ip, port, err := net.SplitHostPort(req.RemoteAddr)
 	if err != nil {
@@ -592,7 +599,6 @@ func init() {
 
 	Handlers = append(Handlers, &Handler{Path: "/sqlConsole", Fn: SqlConsole})
 
-
 	Handlers = append(Handlers, &Handler{Path: "/scd/callback", Fn: ScdCallback})
 	Handlers = append(Handlers, &Handler{Path: "/scd/login", Fn: ScdLogin})
 	Handlers = append(Handlers, &Handler{Path: "/scd/playlists", Fn: GetPlaylists})
@@ -601,6 +607,8 @@ func init() {
 	Handlers = append(Handlers, &Handler{Path: "/feedly/getSubscriptions", Fn: GetSubscriptions})
 	Handlers = append(Handlers, &Handler{Path: "/feedly/getFeedList", Fn: GetFeedList})
 	Handlers = append(Handlers, &Handler{Path: "/feedly/getEntryContent", Fn: GetEntryContent})
+
+	Handlers = append(Handlers, &Handler{Path: "/feed/exportFeedForCitySnap", Fn: ExportFeedForCitySnap})
 
 	Handlers = append(Handlers, &Handler{Path: "/", Fn: Home})
 }
