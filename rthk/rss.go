@@ -86,70 +86,70 @@ type AudioRow struct {
 	NextPage int `json:"nextPage"`
 }
 
-const ycanList = `0B1tCMe1zn1gHdGxnUlI4eGlMZ00,唐詩七絕選賞14 劉長卿 送李判官之潤州行營,0B1tCMe1zn1gHQUZ3Q3o3cXhWdkE
-0B1tCMe1zn1gHbEFRcWJLUTRlOTA,唐詩七絕選賞03 王翰 涼州詞,0B1tCMe1zn1gHb0Q5cWF4djFuUGM
-0B1tCMe1zn1gHRlVWRTFhdnl5QUk,唐詩七絕選賞10 李白 早發白帝城,0B1tCMe1zn1gHcm9mel9FRjZ5UFE
-0B1tCMe1zn1gHNU51d2s5TUJ4cXM,唐詩七絕選賞11 高適 別董大,0B1tCMe1zn1gHdXBueTdLamNCWWs
-0B1tCMe1zn1gHNG04d2gwSW9XeHM,唐詩七絕選賞17 韓翃 寒食,0B1tCMe1zn1gHMXloeDc3WmJkelE
-0B1tCMe1zn1gHSjhBLVJvOGFsd3M,唐詩七絕選賞09 王維 送元二使安西,0B1tCMe1zn1gHbDg3WUtoLXVfM1k
-0B1tCMe1zn1gHLXRQSmNzeGctZG8,唐詩七絕選賞07 王昌齡 閨怨,0B1tCMe1zn1gHUkEzdFN5Z0tEUUk
-0B1tCMe1zn1gHQmhheGZtUWswT1E,唐詩七絕選賞12 張繼 楓橋夜泊,0B1tCMe1zn1gHMXNsMU9uWXBZQlk
-0B1tCMe1zn1gHMGpjdm5sRDB3Y0k,唐詩七絕選賞15 岑參 虢州後亭送李判官使赴晉絳,0B1tCMe1zn1gHRERqYVpVWFREa28
-0B1tCMe1zn1gHOXZucF9ZSlR4TGc,唐詩七絕選賞18 王建 十五夜望月寄杜郎中,0B1tCMe1zn1gHNHpBNGkwbkVDeE0
-0B1tCMe1zn1gHclBmckpxOWtCbUU,唐詩七絕選賞05 王之渙 涼州詞,0B1tCMe1zn1gHRUxGN3B3RWN2OE0
-0B1tCMe1zn1gHdlYwU0tRcURiWlk,唐詩七絕選賞13 杜甫 江南逢李龜年,0B1tCMe1zn1gHMUJFMnh2UFl6ekE
-0B1tCMe1zn1gHaDZ4Mk43WU5JMDA,唐詩七絕選賞04 張旭 桃花谿 山中留客,0B1tCMe1zn1gHVjBEYVVLZm9WOHM
-0B1tCMe1zn1gHRmZpdnpNRnBOQ2s,唐詩七絕選賞06 王昌齡 出塞,0B1tCMe1zn1gHN3JHRUtjUk5sNjA
-0B1tCMe1zn1gHencyRkJUYjNKa2s,唐詩七絕選賞02 賀知章 回鄉偶書,0B1tCMe1zn1gHOWFqazZfcmJvUWM
-0B1tCMe1zn1gHRFlzTUtZbE5HdFU,唐詩七絕選賞01 杜審言 贈蘇綰書記,0B1tCMe1zn1gHYUl6ZDNZbm5vSW8
-0B1tCMe1zn1gHV1BRU0JFeWFPQW8,唐詩七絕選賞08 王維 九月九日憶山東兄弟,0B1tCMe1zn1gHc1Z5TEp1NndNLU0
-0B1tCMe1zn1gHTGJyUDFiQlFrM2c,唐詩七絕選賞16 錢起 暮春歸故山草堂,0B1tCMe1zn1gHZENsQ1dOZjFDV3c
-0B1tCMe1zn1gHTzRaYnpJN3ZrNU0,唐詩七絕選賞19 顧況 宮詞 葉上題詩,0B1tCMe1zn1gHSmwxZjc2eVEtMFU
-0B1tCMe1zn1gHS2VYbWdYRnc0Ukk,唐詩七絕選賞33 朱慶餘 閨意 近試上張水部,0B1tCMe1zn1gHN2gxVGxJeFRaQ2s
-0B1tCMe1zn1gHbTJtMTRrSVk1R1U,唐詩七絕選賞21 張籍 秋思,0B1tCMe1zn1gHSFBpZk14MWY0ckE
-0B1tCMe1zn1gHUTlLb2d0VGdYUzQ,唐詩七絕選賞38 杜牧 金谷園,0B1tCMe1zn1gHdnZpSFlBYlZndWs
-0B1tCMe1zn1gHeDJCNWxSQ2dtdlk,唐詩七絕選賞39 杜牧 清明,0B1tCMe1zn1gHcC1fdVJoTUFiejA
-0B1tCMe1zn1gHc3BYbEY1TzVWMmc,唐詩七絕選賞27 劉禹錫 烏衣巷,0B1tCMe1zn1gHMlg2eWowYjM4SGc
-0B1tCMe1zn1gHZUlBNUlfY2hJeG8,唐詩七絕選賞30 李涉 井欄砂宿遇夜客,0B1tCMe1zn1gHNW1zeGR3REhXd2s
-0B1tCMe1zn1gHb003MUdhb2M0U0U,唐詩七絕選賞31 韋應物 滁州西澗,0B1tCMe1zn1gHRjQyZDBCM3ZUSnM
-0B1tCMe1zn1gHVzNTLXZCaVNGM1U,唐詩七絕選賞32 元稹 離思 五首之四,0B1tCMe1zn1gHY3NOSU5fcWF1Vms
-0B1tCMe1zn1gHWTlBODVTNmJPdU0,唐詩七絕選賞29 張祜 贈內人,0B1tCMe1zn1gHYVpTTm1DQktXcGs
-0B1tCMe1zn1gHQlAyamlRMExBRkE,唐詩七絕選賞23 柳中庸 征人怨,0B1tCMe1zn1gHR0o0TEtDU1VFbEE
-0B1tCMe1zn1gHc2w1U19ERy1iVWc,唐詩七絕選賞22 韓愈 早春呈水部張十八員外,0B1tCMe1zn1gHQW1NVGdZSGIzVVE
-0B1tCMe1zn1gHLTFiWjAySEg1SG8,唐詩七絕選賞28 劉禹錫 石頭城,0B1tCMe1zn1gHOFVKQUM1N1lSbnM
-0B1tCMe1zn1gHczEyTENOcmtIcDg,唐詩七絕選賞40 溫庭筠 蔡中郎墳,0B1tCMe1zn1gHXzk5X0ZZS0NPUUU
-0B1tCMe1zn1gHMFZTdGlVNld4SlU,唐詩七絕選賞26 柳宗元 與浩初上人同看山寄京華親故,0B1tCMe1zn1gHa0x3OXpSZTdPS00
-0B1tCMe1zn1gHTllNZU5kOWF4Ylk,唐詩七絕選賞24 崔護 題都城南莊,0B1tCMe1zn1gHRXhqY0l3ZlJFQm8
-0B1tCMe1zn1gHUmxLaWxJbXh3eFU,唐詩七絕選賞25 李益 夜上受降城聞笛,0B1tCMe1zn1gHSElaYUNFMkhWeW8
-0B1tCMe1zn1gHOHlpSldfcGtCNm8,唐詩七絕選賞37 杜牧 赤壁,0B1tCMe1zn1gHU2laVGg4bE85U2M
-0B1tCMe1zn1gHYzVac1VGaXlsMDA,唐詩七絕選賞34 李賀 南園十三首之六,0B1tCMe1zn1gHanJMbUNLTzRMRms
-0B1tCMe1zn1gHWVRvek9LT2xaX2s,唐詩七絕選賞20 劉方平 月夜,0B1tCMe1zn1gHZTVITUdwZ2FsQXM
-0B1tCMe1zn1gHd0FTWDkxbjVUU3c,唐詩七絕選賞36 杜牧 泊秦淮,0B1tCMe1zn1gHWmllUEdVOFZEM2s
-0B1tCMe1zn1gHMzVsa0VUQUdVLWs,唐詩七絕選賞35 杜牧 題烏江亭,0B1tCMe1zn1gHZGRnYjhwZllyb00
-0B1tCMe1zn1gHYXpJVDhkZzdaZ2s,唐詩七絕選賞43 李商隱 嫦娥,0B1tCMe1zn1gHS2VrMzUwY0VLVlU
-0B1tCMe1zn1gHOWpKdDZJNmdHdkE,唐詩七絕選賞45 鄭畋 馬嵬坡,0B1tCMe1zn1gHWHFEQm96djZITlU
-0B1tCMe1zn1gHUGdkcF9mV05Kazg,唐詩七絕選賞46 司空圖 河湟有感,0B1tCMe1zn1gHRzY4VTAxWHZUenM
-0B1tCMe1zn1gHTUtzUks1eEJmWEE,唐詩七絕選賞49 羅隱 蜂,0B1tCMe1zn1gHbk1xN2JGYV9pTjg
-0B1tCMe1zn1gHaUhUN0RaYXJkRVk,唐詩七絕選賞52 無名氏 雜詩,0B1tCMe1zn1gHSXVaY2E0TFBDU3c
-0B1tCMe1zn1gHZGhRR1pfS3h6WEU,唐詩七絕選賞51 張泌 寄人,0B1tCMe1zn1gHY1lSR2x2UXR6Qjg
-0B1tCMe1zn1gHdDBTNkhzX1lJNzg,唐詩七絕選賞54 花蕊夫人 答宋君,0B1tCMe1zn1gHcy03em9oS3BJSnc
-0B1tCMe1zn1gHUVRsRkJSbHpXcDg,唐詩七絕選賞53 杜秋娘 金縷衣,0B1tCMe1zn1gHWVllWWlyRVlkc2M
-0B1tCMe1zn1gHWDVHRmotaGZMaUk,唐詩七絕選賞41 薛濤 籌邊樓,0B1tCMe1zn1gHaERIZWdGbXdNYzA
-0B1tCMe1zn1gHM0xEc05aeEhJSlk,唐詩七絕選賞44 陳陶 隴西行,0B1tCMe1zn1gHcU9mMDhfbjA1UTQ
-0B1tCMe1zn1gHOGxiMVJMRDZfX1k,唐詩七絕選賞50 羅隱 偶題,0B1tCMe1zn1gHS3ZjV3JZZWh1OTQ
-0B1tCMe1zn1gHZXU2ZVVhaFlJbkU,唐詩七絕選賞48 韓偓 已涼,0B1tCMe1zn1gHNnppR1RjbGxIVmc
-0B1tCMe1zn1gHTnhJM1lSbmxfYWM,唐詩七絕選賞47 韋莊 臺城,0B1tCMe1zn1gHMlBYNnl3eDJxdzA
-0B1tCMe1zn1gHMzM5TG5GN25PWEk,唐詩七絕選賞42 李商隱 夜雨寄北,0B1tCMe1zn1gHTThvT1ZLcGstU2M`
+const ycanList = `0B1tCMe1zn1gHdGxnUlI4eGlMZ00,唐詩七絕選賞14 劉長卿 送李判官之潤州行營,2015-11-28
+0B1tCMe1zn1gHbEFRcWJLUTRlOTA,唐詩七絕選賞03 王翰 涼州詞,2015-11-13
+0B1tCMe1zn1gHRlVWRTFhdnl5QUk,唐詩七絕選賞10 李白 早發白帝城,2015-11-24
+0B1tCMe1zn1gHNU51d2s5TUJ4cXM,唐詩七絕選賞11 高適 別董大,2015-11-25
+0B1tCMe1zn1gHNG04d2gwSW9XeHM,唐詩七絕選賞17 韓翃 寒食,2015-12-03
+0B1tCMe1zn1gHSjhBLVJvOGFsd3M,唐詩七絕選賞09 王維 送元二使安西,2015-11-20
+0B1tCMe1zn1gHLXRQSmNzeGctZG8,唐詩七絕選賞07 王昌齡 閨怨,2015-11-19
+0B1tCMe1zn1gHQmhheGZtUWswT1E,唐詩七絕選賞12 張繼 楓橋夜泊,2015-11-26
+0B1tCMe1zn1gHMGpjdm5sRDB3Y0k,唐詩七絕選賞15 岑參 虢州後亭送李判官使赴晉絳,2015-12-01
+0B1tCMe1zn1gHOXZucF9ZSlR4TGc,唐詩七絕選賞18 王建 十五夜望月寄杜郎中,2015-12-04
+0B1tCMe1zn1gHclBmckpxOWtCbUU,唐詩七絕選賞05 王之渙 涼州詞,2015-11-16
+0B1tCMe1zn1gHdlYwU0tRcURiWlk,唐詩七絕選賞13 杜甫 江南逢李龜年,2015-11-27
+0B1tCMe1zn1gHaDZ4Mk43WU5JMDA,唐詩七絕選賞04 張旭 桃花谿 山中留客,2015-11-13
+0B1tCMe1zn1gHRmZpdnpNRnBOQ2s,唐詩七絕選賞06 王昌齡 出塞,2015-11-17
+0B1tCMe1zn1gHencyRkJUYjNKa2s,唐詩七絕選賞02 賀知章 回鄉偶書,2015-11-11
+0B1tCMe1zn1gHRFlzTUtZbE5HdFU,唐詩七絕選賞01 杜審言 贈蘇綰書記,2015-11-10
+0B1tCMe1zn1gHV1BRU0JFeWFPQW8,唐詩七絕選賞08 王維 九月九日憶山東兄弟,2015-11-19
+0B1tCMe1zn1gHTGJyUDFiQlFrM2c,唐詩七絕選賞16 錢起 暮春歸故山草堂,2015-12-01
+0B1tCMe1zn1gHTzRaYnpJN3ZrNU0,唐詩七絕選賞19 顧況 宮詞 葉上題詩,2015-12-04
+0B1tCMe1zn1gHS2VYbWdYRnc0Ukk,唐詩七絕選賞33 朱慶餘 閨意 近試上張水部,2015-12-24
+0B1tCMe1zn1gHbTJtMTRrSVk1R1U,唐詩七絕選賞21 張籍 秋思,2015-12-08
+0B1tCMe1zn1gHUTlLb2d0VGdYUzQ,唐詩七絕選賞38 杜牧 金谷園,2015-12-31
+0B1tCMe1zn1gHeDJCNWxSQ2dtdlk,唐詩七絕選賞39 杜牧 清明,2016-01-01
+0B1tCMe1zn1gHc3BYbEY1TzVWMmc,唐詩七絕選賞27 劉禹錫 烏衣巷,2015-12-17
+0B1tCMe1zn1gHZUlBNUlfY2hJeG8,唐詩七絕選賞30 李涉 井欄砂宿遇夜客,2015-12-21
+0B1tCMe1zn1gHb003MUdhb2M0U0U,唐詩七絕選賞31 韋應物 滁州西澗,2015-12-23
+0B1tCMe1zn1gHVzNTLXZCaVNGM1U,唐詩七絕選賞32 元稹 離思 五首之四,2015-12-23
+0B1tCMe1zn1gHWTlBODVTNmJPdU0,唐詩七絕選賞29 張祜 贈內人,2015-12-18
+0B1tCMe1zn1gHQlAyamlRMExBRkE,唐詩七絕選賞23 柳中庸 征人怨,2015-12-10
+0B1tCMe1zn1gHc2w1U19ERy1iVWc,唐詩七絕選賞22 韓愈 早春呈水部張十八員外,2015-12-09
+0B1tCMe1zn1gHLTFiWjAySEg1SG8,唐詩七絕選賞28 劉禹錫 石頭城,2015-12-18
+0B1tCMe1zn1gHczEyTENOcmtIcDg,唐詩七絕選賞40 溫庭筠 蔡中郎墳,2016-01-04
+0B1tCMe1zn1gHMFZTdGlVNld4SlU,唐詩七絕選賞26 柳宗元 與浩初上人同看山寄京華親故,2015-12-16
+0B1tCMe1zn1gHTllNZU5kOWF4Ylk,唐詩七絕選賞24 崔護 題都城南莊,2015-12-11
+0B1tCMe1zn1gHUmxLaWxJbXh3eFU,唐詩七絕選賞25 李益 夜上受降城聞笛,2015-12-14
+0B1tCMe1zn1gHOHlpSldfcGtCNm8,唐詩七絕選賞37 杜牧 赤壁,2015-12-30
+0B1tCMe1zn1gHYzVac1VGaXlsMDA,唐詩七絕選賞34 李賀 南園十三首之六,2015-12-25
+0B1tCMe1zn1gHWVRvek9LT2xaX2s,唐詩七絕選賞20 劉方平 月夜,2015-12-07
+0B1tCMe1zn1gHd0FTWDkxbjVUU3c,唐詩七絕選賞36 杜牧 泊秦淮,2015-12-30
+0B1tCMe1zn1gHMzVsa0VUQUdVLWs,唐詩七絕選賞35 杜牧 題烏江亭,2015-12-29
+0B1tCMe1zn1gHYXpJVDhkZzdaZ2s,唐詩七絕選賞43 李商隱 嫦娥,2016-01-07
+0B1tCMe1zn1gHOWpKdDZJNmdHdkE,唐詩七絕選賞45 鄭畋 馬嵬坡,2016-01-11
+0B1tCMe1zn1gHUGdkcF9mV05Kazg,唐詩七絕選賞46 司空圖 河湟有感,2016-01-12
+0B1tCMe1zn1gHTUtzUks1eEJmWEE,唐詩七絕選賞49 羅隱 蜂,2016-01-15
+0B1tCMe1zn1gHaUhUN0RaYXJkRVk,唐詩七絕選賞52 無名氏 雜詩,2016-01-20
+0B1tCMe1zn1gHZGhRR1pfS3h6WEU,唐詩七絕選賞51 張泌 寄人,2016-01-19
+0B1tCMe1zn1gHdDBTNkhzX1lJNzg,唐詩七絕選賞54 花蕊夫人 答宋君,2016-01-22
+0B1tCMe1zn1gHUVRsRkJSbHpXcDg,唐詩七絕選賞53 杜秋娘 金縷衣,2016-01-21
+0B1tCMe1zn1gHWDVHRmotaGZMaUk,唐詩七絕選賞41 薛濤 籌邊樓,2016-01-05
+0B1tCMe1zn1gHM0xEc05aeEhJSlk,唐詩七絕選賞44 陳陶 隴西行,2016-01-09
+0B1tCMe1zn1gHOGxiMVJMRDZfX1k,唐詩七絕選賞50 羅隱 偶題,2016-01-18
+0B1tCMe1zn1gHZXU2ZVVhaFlJbkU,唐詩七絕選賞48 韓偓 已涼,2016-01-14
+0B1tCMe1zn1gHTnhJM1lSbmxfYWM,唐詩七絕選賞47 韋莊 臺城,2016-01-13
+0B1tCMe1zn1gHMzM5TG5GN25PWEk,唐詩七絕選賞42 李商隱 夜雨寄北,2016-01-06`
 
 func ExportFeedForYCantonese() []byte {
-	now := time.Now()
+	pubDate, _ := time.Parse("02/01/2006", "31/01/2016")
 
 	// instantiate a new Podcast
 	p := podcast.New(
 		"粵講越有趣 - 推廣粵文化 粵講越有趣",
 		"http://ycantonese.org/",
 		"陳耀南教授主講",
-		&now, &now,
+		&pubDate, &pubDate,
 	)
 
 	// add some channel properties
@@ -160,15 +160,16 @@ func ExportFeedForYCantonese() []byte {
 
 	for _, line := range strings.Split(ycanList, "\n") {
 		part := strings.Split(line, ",")
-		//fmt.Println("line ", part[0])
 
 		// create an Item
 		url := fmt.Sprintf("https://drive.google.com/uc?id=%s&authuser=0&export=download", part[0])
+
+		date, _ := time.Parse("2006-01-02", part[2])
 		item := podcast.Item{
 			Title:       part[1],
 			Link:        url,
 			Description: part[1],
-			PubDate:     &now,
+			PubDate:     &date,
 		}
 
 		item.AddEnclosure(url, podcast.MP3, 1000)
