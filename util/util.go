@@ -36,7 +36,7 @@ func ReadReqBody(req *http.Request) map[string]string {
 
 func AuthenticateRequest(req *http.Request) bool {
 	pass := false
-	if strings.Contains(req.URL.Path, "/scd/callback") || strings.Contains(req.URL.Path, "/feed/exportFeedForCitySnapShot") {
+	if strings.Contains(req.URL.Path, "/scd/callback") || strings.Contains(req.URL.Path, "/feed/exportFeed") {
 		return true
 	}
 
