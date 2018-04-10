@@ -511,7 +511,7 @@ func ExportFeedForCitySnap(res http.ResponseWriter, req *http.Request) {
 	saveAccessInfo(res, req, "exportFeedForCitySnap")
 	res.Header().Set("Content-Type", "application/rss+xml; charset=utf-8")
 
-	util.CompressData(res, []byte(rthk.ExportFeedForCitySnap()))
+	util.CompressData(res, rthk.ExportFeedForCitySnap())
 }
 
 func saveAccessInfo(res http.ResponseWriter, req *http.Request, funcName string) {
