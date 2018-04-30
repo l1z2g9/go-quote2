@@ -514,6 +514,13 @@ func ExportFeedForCitySnapShot(res http.ResponseWriter, req *http.Request) {
 	util.CompressData(res, rthk.ExportFeedForCitySnapShot())
 }
 
+func ExportFeedForParentsAreNoAliens(res http.ResponseWriter, req *http.Request) {
+	saveAccessInfo(res, req, "ExportFeedForParentsAreNoAliens")
+	res.Header().Set("Content-Type", "application/xml; charset=utf-8")
+
+	util.CompressData(res, rthk.ExportFeedForParentsAreNoAliens())
+}
+
 func ExportFeedForYCantonese(res http.ResponseWriter, req *http.Request) {
 	saveAccessInfo(res, req, "ExportFeedForYCantonese")
 	res.Header().Set("Content-Type", "application/xml; charset=utf-8")
@@ -616,6 +623,7 @@ func init() {
 	Handlers = append(Handlers, &Handler{Path: "/feedly/getEntryContent", Fn: GetEntryContent})
 
 	Handlers = append(Handlers, &Handler{Path: "/feed/exportFeedForCitySnapShot.xml", Fn: ExportFeedForCitySnapShot})
+	Handlers = append(Handlers, &Handler{Path: "/feed/exportFeedForParentsAreNoAliens.xml", Fn: ExportFeedForParentsAreNoAliens})
 	Handlers = append(Handlers, &Handler{Path: "/feed/exportFeedForYCantonese.xml", Fn: ExportFeedForYCantonese})
 
 	Handlers = append(Handlers, &Handler{Path: "/", Fn: Home})
