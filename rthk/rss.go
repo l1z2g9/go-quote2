@@ -14,16 +14,16 @@ import (
 
 func ExportFeedForCitySnapShot() []byte {
 	return ExportFeed("RTHK City Snapshot", "City_Snapshot",
-		"我們邀請旅居世界各地的名人為節目撰稿及以廣東話聲音演繹，以感性角度去分析他們身處的國家時事。")
+		"我們邀請旅居世界各地的名人為節目撰稿及以廣東話聲音演繹，以感性角度去分析他們身處的國家時事。", 27)
 }
 
 func ExportFeedForParentsAreNoAliens() []byte {
 	return ExportFeed("RTHK Parents Are No Aliens", "parents_are_no_aliens",
 		`「教育生態抓狂，怪獸家長橫行，學校成了鬥獸場。」 
-		學生、家長及老師的關係似乎是敵對，家長及老師亦難免被標籤為怪獸。但天下間那有父母不愛子女？那有老師不想作育英才？其實家長與學校也不一定是怪獸！`)
+		學生、家長及老師的關係似乎是敵對，家長及老師亦難免被標籤為怪獸。但天下間那有父母不愛子女？那有老師不想作育英才？其實家長與學校也不一定是怪獸！`, 10)
 }
 
-func ExportFeed(title, programme, description string) []byte {
+func ExportFeed(title, programme, description string, limit int) []byte {
 	now := time.Now()
 
 	// instantiate a new Podcast
@@ -42,7 +42,7 @@ func ExportFeed(title, programme, description string) []byte {
 	p.IExplicit = "no"
 
 	urlTmpl := "http://www.rthk.hk/radio/catchUp?c=radio1&p=" + programme + "&page=%d&m="
-	for i := 1; i < 27; i++ {
+	for i := 1; i < limit; i++ {
 		url := fmt.Sprintf(urlTmpl, i)
 		//fmt.Println(url)
 		resp, _ := http.Get(url)
