@@ -1,13 +1,13 @@
 package securities
 
 import (
-	"github.com/l1z2g9/go-quote2/util"
 	"database/sql"
 	"encoding/json"
 	"fmt"
 	iconv "github.com/djimenez/iconv-go"
+	"github.com/l1z2g9/go-quote2/util"
 	// _ "github.com/mattn/go-sqlite3"
-    _ "github.com/lib/pq"
+	_ "github.com/lib/pq"
 	"io/ioutil"
 	"net/http"
 	"reflect"
@@ -117,6 +117,11 @@ func GetQuoteWithFormat(category string) string {
 	output = append(output, "USDJPY: "+strconv.FormatFloat(rate["USDJPY"], 'g', 4, 32))
 	output = append(output, " ")
 
+	cryptoCompare := dataList.CryptoPrice
+	output = append(output, "BTC: "+strconv.FormatFloat(cryptoCompare.BTC.USD, 'g', 4, 32))
+	output = append(output, "ETH: "+strconv.FormatFloat(cryptoCompare.ETH.USD, 'g', 4, 32))
+	output = append(output, "LTC: "+strconv.FormatFloat(cryptoCompare.LTC.USD, 'g', 4, 32))
+
 	output = append(output, "Update at: "+time)
 
 	return strings.Join(output, "\n")
@@ -134,7 +139,7 @@ func getRawQuote(category string) DataList {
 
 	quotes, composite_index, index_future := parseData(url, data, holds, observation)
 
-	dataList := DataList{quotes, composite_index, index_future, getGoldPrice(), getGoldPriceFromKITCO(), getExchangeRate()}
+	dataList := DataList{quotes, composite_index, index_future, getGoldPrice(), getGoldPriceFromKITCO(), getExchangeRate(), getCrytoCurrencyPrice()}
 
 	return dataList
 }
@@ -543,6 +548,32 @@ func getExchangeRateOld() map[string]float64 {
 	return rate
 }
 
+func getCrytoCurrencyPrice() CryptoCompare {
+	resp, _ := http.Get("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC&tsyms=USD")
+	defer resp.Body.Close()
+
+	body, _ := ioutil.ReadAll(resp.Body)
+
+	var cryptoCompare CryptoCompare
+	if err := json.Unmarshal(body, &cryptoCompare); err != nil {
+		panic(err)
+	}
+
+	return cryptoCompare
+}
+
+type CryptoCompare struct {
+	BTC struct {
+		USD float64 `json:"USD"`
+	} `json:"BTC"`
+	ETH struct {
+		USD float64 `json:"USD"`
+	} `json:"ETH"`
+	LTC struct {
+		USD float64 `json:"USD"`
+	} `json:"LTC"`
+}
+
 func getExchangeRate() map[string]float64 {
 	resp, _ := http.Get("http://wap.kitco.cn/exch.wml")
 	defer resp.Body.Close()
@@ -669,4 +700,5 @@ type DataList struct {
 	GoldPrice          string
 	GoldPriceFromKITCO map[string]string
 	ExchangeRate       map[string]float64
+	CryptoPrice        CryptoCompare
 }
