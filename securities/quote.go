@@ -118,9 +118,10 @@ func GetQuoteWithFormat(category string) string {
 	output = append(output, " ")
 
 	cryptoCompare := dataList.CryptoPrice
-	output = append(output, "BTC: "+strconv.FormatFloat(cryptoCompare.BTC.USD, 'g', 4, 32))
-	output = append(output, "ETH: "+strconv.FormatFloat(cryptoCompare.ETH.USD, 'g', 4, 32))
-	output = append(output, "LTC: "+strconv.FormatFloat(cryptoCompare.LTC.USD, 'g', 4, 32))
+	output = append(output, "BTC: "+strconv.FormatFloat(cryptoCompare.BTC.USD, 'g', 6, 32))
+	output = append(output, "ETH: "+strconv.FormatFloat(cryptoCompare.ETH.USD, 'g', 5, 32))
+	output = append(output, "LTC: "+strconv.FormatFloat(cryptoCompare.LTC.USD, 'g', 5, 32))
+    output = append(output, " ")
 
 	output = append(output, "Update at: "+time)
 
