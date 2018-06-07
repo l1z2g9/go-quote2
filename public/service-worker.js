@@ -3,15 +3,15 @@
 
 const
   version = '1.0.0',
-  CACHE = version + '::my-music',
+  CACHE = version + '::my-music2',
   offlineURL = '/offline/',
   installFilesEssential = [
     'manifest.json',
     // '/css/styles.css',
     'js/main.js',
     'js/offlinepage.js',
-    'data.js'
-    // '/images/logo/logo152.png'
+    'data.js',
+    'images/logo/logo152.png'
   ]; //.concat(offlineURL),
   installFilesDesirable = [
     '/favicon.ico',

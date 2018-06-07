@@ -38,6 +38,7 @@ func AuthenticateRequest(req *http.Request) bool {
 	pass := false
 	skipList := `/scd/callback
 /feed/exportFeed
+favicon.ico
 /public`
 	for _, file := range strings.Split(skipList, "\n") {
 		if strings.Contains(req.URL.Path, file) {

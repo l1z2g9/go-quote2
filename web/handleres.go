@@ -528,6 +528,11 @@ func ExportFeedForYCantonese(res http.ResponseWriter, req *http.Request) {
 	util.CompressData(res, rthk.ExportFeedForYCantonese())
 }
 
+func Favicon(res http.ResponseWriter, req *http.Request) {
+	//fmt.Fprint(res,
+	http.ServeFile(res, req, "public/favicon.ico")
+}
+
 func saveAccessInfo(res http.ResponseWriter, req *http.Request, funcName string) {
 	ip, port, err := net.SplitHostPort(req.RemoteAddr)
 	if err != nil {
@@ -626,5 +631,6 @@ func init() {
 	Handlers = append(Handlers, &Handler{Path: "/feed/exportFeedForParentsAreNoAliens.xml", Fn: ExportFeedForParentsAreNoAliens})
 	Handlers = append(Handlers, &Handler{Path: "/feed/exportFeedForYCantonese.xml", Fn: ExportFeedForYCantonese})
 
+	Handlers = append(Handlers, &Handler{Path: "/favicon.ico", Fn: Favicon})
 	Handlers = append(Handlers, &Handler{Path: "/", Fn: Home})
 }
