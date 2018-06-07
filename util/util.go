@@ -36,8 +36,13 @@ func ReadReqBody(req *http.Request) map[string]string {
 
 func AuthenticateRequest(req *http.Request) bool {
 	pass := false
-	if strings.Contains(req.URL.Path, "/scd/callback") || strings.Contains(req.URL.Path, "/feed/exportFeed") {
-		return true
+	skipList := `/scd/callback
+/feed/exportFeed
+/public`
+	for _, file := range strings.Split(skipList, "\n") {
+		if strings.Contains(req.URL.Path, file) {
+			return true
+		}
 	}
 
 	/*for _, c := range req.Cookies() { // Simple authentication, should use OAuth 2.0
