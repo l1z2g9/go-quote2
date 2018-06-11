@@ -142,7 +142,7 @@ var Menu = function (_React$Component2) {
     _this3.state = { cat: '粵講越有趣', subCat: '唐詩七絕選賞 - 陳耀南教授主講', list: ycanList };
     _this3.handleChange = _this3.handleChange.bind(_this3);
 
-    _this3.audioList = { '唐詩七絕選賞 - 陳耀南教授主講': ycanList, '葉培': yePeiList, '潘昭強': panChaoQiangList, '周永傑': zhouYongJieList, 'RTHK': rthkList };
+    _this3.audioList = { '唐詩七絕選賞 - 陳耀南教授主講': ycanList, '葉培': yePeiList, '潘昭強': panChaoQiangList, '周永傑': zhouYongJieList, '招秉恒': zhaobinghengList, '梁潔娥': liangjieeList, '譚惠清': tanhuiqingList, '鍾飛': zhongfeiList, '嚴劍蓉': yanjianrongList, 'RTHK': rthkList };
     // this.audioList = {'1':ycanList, '2': yePeiList, '3': panChaoQiangList, '4': zhouYongJieList, '5', zhaobinghengList, '6': liangjieeList, '7': tanhuiqingList, '8': zhongfeiList, '9': yanjianrongList};
     return _this3;
   }
