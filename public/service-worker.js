@@ -10,7 +10,7 @@ const
     // '/css/styles.css',
     'js/main.js',
     'js/offlinepage.js',
-    'data.js',
+    // 'data.js',
     'images/logo/logo152.png'
   ]; //.concat(offlineURL),
   installFilesDesirable = [

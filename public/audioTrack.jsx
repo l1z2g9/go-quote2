@@ -109,7 +109,6 @@ class Menu extends React.Component {
                   </ul>
                 </li>
                 <li className="pure-menu-item"><a href="#" onClick={this.handleChange} data-cat="LiveRadio" data-subcat="RTHK" className="pure-menu-link">RTHK Live Radio</a></li>
-                <li className="pure-menu-item"><a href="#" onClick={this.handleChange} className="pure-menu-link">Finance</a></li>
             </ul>
         </div>
         <h1>{this.state.cat}</h1>
