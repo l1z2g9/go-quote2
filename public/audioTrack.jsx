@@ -42,7 +42,7 @@ class AudioTrack extends React.Component {
                         <td>
                 {list.length > 2 &&
                           
-                            <a href="https://drive.google.com/uc?id={list[2]}&authuser=0&export=download">{list[1]}</a>
+                            <a href={"https://drive.google.com/uc?id=" + list[2] + "&authuser=0&export=download"}>{list[1]}</a>
                 }
                 {list.length ==2 &&
                             list[1]

@@ -84,7 +84,7 @@ var AudioTrack = function (_React$Component) {
                   null,
                   list.length > 2 && React.createElement(
                     "a",
-                    { href: "https://drive.google.com/uc?id={list[2]}&authuser=0&export=download" },
+                    { href: "https://drive.google.com/uc?id=" + list[2] + "&authuser=0&export=download" },
                     list[1]
                   ),
                   list.length == 2 && list[1]
