@@ -271,15 +271,6 @@ var Menu = function (_React$Component2) {
                 { href: "#", onClick: this.handleChange, "data-cat": "LiveRadio", "data-subcat": "RTHK", className: "pure-menu-link" },
                 "RTHK Live Radio"
               )
-            ),
-            React.createElement(
-              "li",
-              { className: "pure-menu-item" },
-              React.createElement(
-                "a",
-                { href: "#", onClick: this.handleChange, className: "pure-menu-link" },
-                "Finance"
-              )
             )
           )
         ),
