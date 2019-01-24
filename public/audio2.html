@@ -21,11 +21,108 @@
     <script src="./data.js?s=123"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <script>
+      var audioList = {'唐詩七絕選賞 - 陳耀南教授主講':ycanList, '葉培':yePeiList, '潘昭強':panChaoQiangList, '周永傑':zhouYongJieList, '招秉恒':zhaobinghengList, '梁潔娥':liangjieeList, '譚惠清':tanhuiqingList, '鍾飛':zhongfeiList, '嚴劍蓉':yanjianrongList, 'RTHK': rthkList};
+      var playList;
+
+      $(function(){
+        $("#cat").text("粵講越有趣");
+        $("#subCat").text("唐詩七絕選賞 - 陳耀南教授主講");
+        updatePlayList(ycanList);
+      });
+
+      function updatePlayList(list){
+        $("#audioList > tbody").empty();
+        $(list).each(function(index, dom){
+          var link = $(dom)[0];
+          var title = $(dom)[1];
+          var row = '';
+          if (index % 2 == 0)
+          {
+            row += "<tr class='pure-table-odd'>";
+          } else {
+            row += "<tr>";
+          }
+
+          if ($(dom).length > 2)
+          {
+              row += "<td><a href='https://drive.google.com/uc?id=" + $(dom)[2] + "&authuser=0&export=download'>" + title + "</a></td>";
+          } else {
+              row += "<td>" + title + "</td>";
+          }
+
+          row += "<td><button type='button' class='pure-button pure-button-primary' onClick='handleChange(this)' value=" + link + ">Play</button></td></tr>";
+
+          $(row).appendTo($("#audioList > tbody"));
+        });
+      }
+
+      function handleChange(button){
+        var anchor = $(button).parents('tr').find('td:eq(0)');
+        var link = $(button).val();
+        var title = anchor.text();
+        playMusic(title, link);
+      }
+
+      function playMusic(title, url){
+        var link = url;
+        if (link.indexOf('http') == -1) {
+          link = "https://drive.google.com/uc?id=" + url + "&authuser=0&export=download";
+        }
+
+        var audio = $("audio").attr("src", link);
+        audio[0].pause();
+        audio[0].load();
+        audio[0].play();
+
+        $("#playtrack").text(title);
+      }
+
+      function playEnd(){
+        var track = Math.floor((Math.random() * playList.length) + 1);
+        var link = "https://drive.google.com/uc?id=" + playList[track][0] + "&authuser=0&export=download";
+        var title = playList[track][1];
+        playMusic(title, link);
+      }
+
+      function menuChange(menu){
+        $("#cat").text($(menu).data("cat"));
+        $("#subCat").text($(menu).data("subcat"));
+
+        playList = audioList[$(menu).data("subcat")];
+        updatePlayList(playList);
+      }
+    </script>
 
 </head>
 
 <body>
-  <table class="pure-table">
+    <div>
+      <div class="pure-menu pure-menu-horizontal">
+          <ul class="pure-menu-list">
+              <li class="pure-menu-item"><a href="#" onClick="menuChange(this)" data-cat="粵講越有趣" data-subcat="唐詩七絕選賞 - 陳耀南教授主講" class="pure-menu-link">粵講越有趣</a></li>
+               <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                <a href="#" id="menuLink1" class="pure-menu-link">大城小事</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a href="#" onClick="menuChange(this)" data-cat="大城小事" data-subcat="葉培" class="pure-menu-link">葉培</a></li>
+                    <li class="pure-menu-item"><a href="#" onClick="menuChange(this)" data-cat="大城小事" data-subcat="潘昭強" class="pure-menu-link">潘昭強</a></li>
+                    <li class="pure-menu-item"><a href="#" onClick="menuChange(this)" data-cat="大城小事" data-subcat="周永傑" class="pure-menu-link">周永傑</a></li>
+                    <li class="pure-menu-item"><a href="#" onClick="menuChange(this)" data-cat="大城小事" data-subcat="招秉恒" class="pure-menu-link">招秉恒</a></li>
+                    <li class="pure-menu-item"><a href="#" onClick="menuChange(this)" data-cat="大城小事" data-subcat="梁潔娥" class="pure-menu-link">梁潔娥</a></li>
+                    <li class="pure-menu-item"><a href="#" onClick="menuChange(this)" data-cat="大城小事" data-subcat="譚惠清" class="pure-menu-link">譚惠清</a></li>
+                    <li class="pure-menu-item"><a href="#" onClick="menuChange(this)" data-cat="大城小事" data-subcat="鍾飛" class="pure-menu-link">鍾飛</a></li>
+                    <li class="pure-menu-item"><a href="#" onClick="menuChange(this)" data-cat="大城小事" data-subcat="嚴劍蓉" class="pure-menu-link">嚴劍蓉</a></li>
+                </ul>
+              </li>
+              <li class="pure-menu-item"><a href="#" onClick="menuChange(this)" data-cat="LiveRadio" data-subcat="RTHK" class="pure-menu-link">RTHK Live Radio</a></li>
+          </ul>
+      </div>
+      <h1 id="cat"></h1>
+      <h2 id="subCat"></h2>
+   </div>
+
+
+  <table class="pure-table" id="audioList">
      <thead>
           <tr>
               <th>Soundtrack</th>
@@ -33,15 +130,18 @@
           </tr>
       </thead>
       <tbody>
-          <tr>
-              <td>1</td>
-              <td>Honda</td>
-          </tr>
       </tbody>
+      <tfoot>
+          <tr>
+              <td colSpan="5" class="bg-info">
+                  <b><span id="playtrack"></span></b>
+              </td>
+          </tr>
+      </tfoot>
   </table>
 
   <div>
-    <audio controls src="https://drive.google.com/uc?id=1ka5MlBsju7b7Qo4kmjG6bb_zNAA422D9&authuser=0&export=download" autoPlay></audio>
+    <audio controls src="" autoPlay onEnded="playEnd()"></audio>
   </div>
 </body>
 </html>
