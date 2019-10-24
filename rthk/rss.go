@@ -14,7 +14,7 @@ import (
 
 func ExportFeedForCitySnapShot() []byte {
 	return ExportFeed("RTHK City Snapshot", "City_Snapshot",
-		"我們邀請旅居世界各地的名人為節目撰稿及以廣東話聲音演繹，以感性角度去分析他們身處的國家時事。", 3)
+		"我們邀請旅居世界各地的名人為節目撰稿及以廣東話聲音演繹，以感性角度去分析他們身處的國家時事。", 27)
 }
 
 func ExportFeedForParentsAreNoAliens() []byte {
