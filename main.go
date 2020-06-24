@@ -16,7 +16,7 @@ func init() {
 	// util.ShowLog()
 }
 
-func maino() {
+func main_old() {
 	fs := http.FileServer(http.Dir("."))
 	http.Handle("/", fs)
 
